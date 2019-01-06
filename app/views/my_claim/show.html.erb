@@ -1,0 +1,25 @@
+<section class="pt180 pb180 pt-xs-80 pb-xs-80">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+              <h3 class="mb40 mb-xs-32">Tipo de Reclamo: <%= @my_claim.claim_type %></h3>
+              <p class="lead mb0">
+                 <%= @my_claim.body %>
+              </p>
+              <br>
+              <h3 class="mb40 mb-xs-32"> Respuesta: </h3>
+              <% unless @my_claim.response.nil? %>
+                <p>
+                   <%= @my_claim.response %>
+                </p>
+              <% else %>
+                <p>
+                  Aun no se respondio este reclamo
+                </p>
+              <% end %>
+          </div>
+      </div>
+      <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>

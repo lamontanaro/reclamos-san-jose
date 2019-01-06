@@ -1,0 +1,46 @@
+<div class="cl-sidebar">
+  <div class="cl-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="cl-navblock">
+    <div class="menu-space">
+      <div class="content">
+        <%= link_to admin_root_path do %>
+          <div class="sidebar-logo">
+            <div class="logo text-center">
+              <div class="row">
+                <div class="col-lg-12 hidden-sm hidden-xs">
+                  <%= image_tag 'logo-light.png', class: "logo-cms" %>
+                </div>
+                <div class="hidden-lg hidden-md visible-xs-12">
+                  <%= image_tag 'yb.png', class: "logo-mini"%>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <div class="side-user">
+          <div class="info">
+            <p>
+              <i class="fa fa-user"></i>
+              Panel de Administrador
+            </p>
+          </div>
+        </div>
+        <ul class="cl-vnavigation">
+          <li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Reclamos</span>
+            </a>
+            <ul class="sub-menu">
+              <li class="">
+                <%= link_to "Lista de Reclamos", admin_claims_path %>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

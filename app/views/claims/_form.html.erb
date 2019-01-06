@@ -1,0 +1,55 @@
+<section class="page-title page-title-4 image-bg overlay">
+  <div class="background-image-holder fadeIn">
+    <%= image_tag("reclamos.jpg") %>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="uppercase mb8">Reclamos</h2>
+        <p class="lead mb0">Hace tu reclamo de forma</p>
+        <p class="lead mb0">rapida y facil</p>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+
+<section>
+  <div class="container">
+  <% if @claim.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h2><%= pluralize(@claim.errors.count, "error") %> prohibió que este @claimo se guarde:</h2>
+
+      <ul>
+      <% @claim.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <%= form_for(@claim) do |form| %>
+          <div class="form-group">
+            <%= form.label :reclamo_sobre %>
+            <%= form.select :claim_type, claim_types_for_select, { include_blank: "Seleccionar tipo de reclamo" }, required: true %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :escribi_tu_reclamo %>
+            <%= form.text_area :body, class: 'form-control', required: true, size: "20x10" %>
+          </div>
+
+          <div class="actions">
+            <%= form.submit 'Aceptar' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

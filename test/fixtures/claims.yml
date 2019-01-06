@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  claim_type: 1
+  body: MyString
+  response: MyString
+  claim_code: MyString
+  state: 1
+
+two:
+  claim_type: 1
+  body: MyString
+  response: MyString
+  claim_code: MyString
+  state: 1

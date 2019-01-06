@@ -1,0 +1,33 @@
+<section class="image-square left">
+    <div class="col-md-6 image">
+        <div class="background-image-holder fadeIn" style="background: url(&quot;img/cover11.jpg&quot;);">
+            <%= image_tag("cover11.jpg", class: 'background-image') %>
+        </div>
+    </div>
+    <div class="col-md-6 col-md-offset-1 content">
+        <h3>Hacer un reclamo</h3>
+        <p class="mb0">
+            Ahora podes hacer tus reclamos de una manera mas facil y rapida. Luego podras hacer el seguimiento del mismo.
+        </p>
+        <br>
+        <br>
+        <%= link_to "HACER UN RECLAMO", new_claim_path, class: 'btn btn-lg' %>
+    </div>
+</section>
+
+<section class="image-square right">
+    <div class="col-md-6 image">
+        <div class="background-image-holder fadeIn">
+            <%= image_tag("reclamos.jpg", class: 'background-image') %>
+        </div>
+    </div>
+    <div class="col-md-6 content">
+        <h3>Seguimiento de un reclamo</h3>
+        <p class="mb0">
+            Desde aqui podras ver si tu reclamo fue contestado y el estado del mismo.
+        </p>
+        <br>
+        <br>
+        <%= link_to "VER UN RECLAMO", new_my_claim_path, class: 'btn btn-lg' %>
+    </div>
+</section>

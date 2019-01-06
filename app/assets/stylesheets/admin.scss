@@ -1,0 +1,39 @@
+//Template
+@import "admin_template/bootstrap";
+@import "admin_template/pygments";
+@import "font-awesome";
+@import "admin_template/nanoscroller";
+@import "admin_template/codemirror";
+@import "admin_template/ambiance";
+@import "admin_template/jquery-jvectormap-1.2.2.css";
+@import "admin_template/style";
+@import "admin_template/style-green";
+
+.logo-cms {
+  width: 60%;
+}
+
+.sidebar-logo {
+    background: #ffffff
+}
+
+.logo-mini {
+  width: 40%;
+}
+
+@media (max-width: 575px) {
+  .logo-mini {
+    width: 23%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .logo-mini {
+    width: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .logo-mini {
+    width: 15%;
+  }
+}
